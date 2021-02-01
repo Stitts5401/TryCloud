@@ -2,14 +2,12 @@ package trycloud.testcases;
 
 import com.trycloud.base.TestBase;
 import com.trycloud.pages.homepages.HomePage;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import com.trycloud.base.TestBase;
 import com.trycloud.pages.homepages.HomePage;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
 import org.testng.Assert;
 
     public class HomePageSteps extends TestBase {
