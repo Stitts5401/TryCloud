@@ -1,16 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="NEXT BASE CRM TEST">
+<suite name="FREE CRM Application Test Automation Test Suite">
 
     <listeners>
-        <listener class-name="com.crm.qa.ExtentReportListener.ExtentReporterNG"></listener>
+        <listener class-name="com.trycloud.ExtentReportListener.ExtentReporterNG" />
     </listeners>
 
-    <test name="CRM Test Cases">
-        <classes>
 
-            <class name="com.crm.qa.testcases.HomePageTest"/>
+    <test name="Free CRM App Test Cases">
+        <classes>
+            <class name="trycloud.testcases.TC_01_steps"></class>
+            <class name="trycloud.testcases.HomePageSteps"></class>
+            <class name="trycloud.testcases.TC_02_Steps"></class>
 
         </classes>
     </test>
-</suite>
+</suite

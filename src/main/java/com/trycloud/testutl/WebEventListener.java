@@ -1,4 +1,5 @@
-package com.trycloud.util;
+package com.trycloud.testutl;
+
 /*************************************** PURPOSE **********************************
  - This class implements the WebDriverEventListener, which is included under events.
  The purpose of implementing this interface is to override all the methods and define certain useful  Log statements
@@ -7,7 +8,7 @@ package com.trycloud.util;
  as an when the action done (click, findBy etc).
  */
 
-
+import java.io.IOException;
 import com.trycloud.base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -15,7 +16,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-import java.io.IOException;
 
 public class WebEventListener extends TestBase implements WebDriverEventListener {
 
@@ -60,7 +60,7 @@ public class WebEventListener extends TestBase implements WebDriverEventListener
     }
 
     public void onException(Throwable error, WebDriver driver) {
-        System.out.println("Exception occured: " + error);
+        System.out.println("Exception occured: TAKINGSCREENSHOT, " + error);
         try {
             TestUtil.takeScreenshotAtEndOfTest();
         } catch (IOException e) {

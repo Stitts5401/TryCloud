@@ -13,9 +13,17 @@ public class LoginPage extends TestBase {
     WebElement passwordField;
     @FindBy(xpath = "//input[@id='submit']")
     WebElement loginButton;
+    @FindBy(xpath = "//div//p[@class='warning wrongPasswordMsg']")
+    WebElement errorMsg;
 
     public LoginPage(){
         PageFactory.initElements(driver,this);
+    }
+    public FilePage loginHappyPath(){
+            usernameField.sendKeys(prop.getProperty("username"));
+            passwordField.sendKeys(prop.getProperty("password"));
+                loginButton.click();
+        return new FilePage();
     }
 
     public FilePage login(String un, String pass){
@@ -28,4 +36,21 @@ public class LoginPage extends TestBase {
         return driver.getTitle();
     }
 
+    public void loginWithUsernamePassword(String arg0, String arg1) {
+        usernameField.sendKeys(arg0);
+        passwordField.sendKeys(arg1);
+        loginButton.click();
+    }
+
+    public String checkUrl() {
+        return driver.getCurrentUrl();
+    }
+
+    public String checkTitle() {
+        return driver.getTitle();
+    }
+
+    public boolean containsErrorMsg() {
+        return errorMsg.isDisplayed();
+    }
 }
